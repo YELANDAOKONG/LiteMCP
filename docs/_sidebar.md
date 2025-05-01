@@ -2,10 +2,10 @@
     * [README](README.md)
 
 * LiteMCP
-    * [LiteMCP - Main](Protocols/Main/INDEX)
-        * [1.0.0 (Draft)](Protocols/Main/Versions/Protocol-1-0-0/INDEX)
-            * [基本](Protocols/Main/Versions/Protocol-1-0-0/Files/Basic)
-            * [提示词](Protocols/Main/Versions/Protocol-1-0-0/Files/Prompt)
-            * [数据结构](Protocols/Main/Versions/Protocol-1-0-0/Files/DataStructure)
-            * [通讯协议](Protocols/Main/Versions/Protocol-1-0-0/Files/Transmission)
-                * [HTTP](Protocols/Main/Versions/Protocol-1-0-0/Files/Transmission/HTTP)
+    * [LiteMCP - Main](protocols/main/index)
+        * [1.0.0 (Draft)](protocols/main/versions/protocol-1-0-0/index)
+            * [基本](protocols/main/versions/protocol-1-0-0/files/basic)
+            * [提示词](protocols/main/versions/protocol-1-0-0/files/prompt)
+            * [数据结构](protocols/main/versions/protocol-1-0-0/files/data-structure)
+            * [通讯协议](protocols/main/versions/protocol-1-0-0/files/transmission)
+                * [HTTP](protocols/main/versions/protocol-1-0-0/files/transmission/http)

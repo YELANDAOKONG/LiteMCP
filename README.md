@@ -15,7 +15,7 @@ LiteMCP 是一个精简的 "MCP 协议"。
 
 ## 协议规范
 
-- [LiteMCP - Main](docs/Protocols/Main/INDEX.MD)
+- [LiteMCP - Main](docs/protocols/main/INDEX.MD)
 
 ---
 
