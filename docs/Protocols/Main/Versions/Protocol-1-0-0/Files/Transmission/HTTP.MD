@@ -112,3 +112,6 @@ Authentication: Bearer <Token>
 }
 ```
 
+> 此处 `error` 字段仅用于服务端标识调用是否出错，即使出错也不会改变 JSON 数据格式，开发者可以将错误信息置于 `response.content` 中返回给模型处理（非强制要求）。
+
+
