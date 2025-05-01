@@ -34,18 +34,81 @@ Authentication: Bearer <Token>
 
 协议使用 GET 请求获取工具基本信息，使用 POST 请求执行调用。
 
-### 工具信息获取
+### 工具信息获取与工具调用
 
-工具信息获取的请求路径由服务端定义，本协议不进行规定。
+工具信息获取及调用的请求路径由服务端定义，本协议不进行规定。
+
+> 协议规定工具信息获取的请求路径与工具调用的请求路径必须一致，仅通过 GET / POST 方法进行区分。
+
+#### 获取工具信息
+
 
 工具信息应遵循 [数据结构]() 章节中定义的 `Tool` 结构。
 
-**完整的示例响应如下：**
+客户端直接发起 HTTP GET 请求获取工具信息。
+
+**完整的示例服务端响应如下 (GET):** (示例中版本号仅作演示，请以实际规定为准)
 
 ```json
 {
-    
+    "version": [1, 0, 0],
+    "name": "Calculator",
+    "description": "A simple calculator",
+    "example": "Calculate the sum of 2 and 3",
+    "parameters": [
+        {
+            "name": "a",
+            "type": "number",
+            "description": "The first number",
+            "example": "2"
+        },
+        {
+            "name": "b",
+            "type": "number",
+            "description": "The second number",
+            "example": "3"
+        }
+    ]
 }
 ```
 
+此时客户端应当将此工具信息通过提示词工程传输给大语言模型，并通过提示词工程使其在需要时调用。
+
+#### 调用工具
+
+当客户端需要调用此工具时，应当使用 POST 请求，请求路径与工具信息获取时的请求路径一致。
+
+**完整的示例客户端请求如下 (POST):** (示例中版本号仅作演示，请以实际规定为准)
+
+```json
+{
+    "version": [1, 0, 0],
+    "tool": "Calculator",
+    "arguments": [
+        "2",
+        "3"
+    ]
+}
+```
+
+**完整的示例服务端响应如下 (POST):**
+
+```json
+{
+    "version": [1, 0, 0],
+    "params": {
+        "a": "2",
+        "b": "3"
+    },
+    "response": {
+        "content": [
+            {
+                "type": "number",
+                "data": "5"
+            }
+        ],
+        "error": false
+    }
+}
+```
 
