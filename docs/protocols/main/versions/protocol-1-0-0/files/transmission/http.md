@@ -13,8 +13,6 @@ Connection: Keep-Alive
 Keep-Alive: timeout=180, max=100
 ```
 
-
-
 ## 身份验证
 
 如果服务端需要身份验证，则每次请求都必须包含一个 `Authorization` 请求头，格式如下：
