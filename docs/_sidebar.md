@@ -3,7 +3,7 @@
 
 * LiteMCP
     * [LiteMCP - Main](protocols/main/index)
-        * [1.0.0 (Draft)](protocols/main/versions/protocol-1-0-0/index)
+        * [1.0.0](protocols/main/versions/protocol-1-0-0/index)
             * [基本](protocols/main/versions/protocol-1-0-0/files/basic)
             * [提示词](protocols/main/versions/protocol-1-0-0/files/prompt)
             * [数据结构](protocols/main/versions/protocol-1-0-0/files/data-structure)
